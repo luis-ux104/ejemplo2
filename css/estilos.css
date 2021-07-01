@@ -1,6 +1,128 @@
-.bg-morado{
-    background-color: #7250AA;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-.card-img-to{
-height: 300px;
+body{
+    min-height: 100%;
+}
+html{
+    height: 100%;
+}
+/*////////////////////////////////////////*/
+.grid-conteiner >*{
+    box-shadow: -1px 1px 7px 0px black;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+
+}
+/*////////////////////////////////////////*/
+.navegacion{
+grid-area: navegacion;
+background-color: tomato;
+}
+/*////////////////////////////////////////*/
+.imagen-principal{
+    grid-area: imgprincipal;
+    background-color: aqua;
+
+}
+.imagen-principal img{
+width: 90%;
+height: 100%;
+
+}
+/*////////////////////////////////////////*/
+.bienvenidos{
+grid-area: bienvenida;
+background-color: aquamarine;
+
+}
+.bienvenidos .h1{
+    font-size: 50px;
+}
+.bienvenidos .h2{
+    font-size: 50px;
+
+}
+/*////////////////////////////////////////*/
+.google{
+grid-area: google;
+background-color:yellow;
+}
+.google img{
+width: 100px;
+height: 40px;
+}
+/*////////////////////////////////////////*/
+.apple{
+grid-area: apple;
+background-color: violet;
+}
+.apple img{
+    width: 100px;
+    height: 40px;
+}
+/*////////////////////////////////////////*/
+.carousel{
+    grid-area: carousel;
+    background-color: teal;
+}
+/*////////////////////////////////////////*/
+.footer{
+    grid-area: footer;
+    background-color: thistle;
+
+}
+/*////////////////////////////////////////*/
+.cuerpo{
+    grid-area: cuerpo;
+    background-color: yellowgreen;
+}
+/*////////////////////////////////////////*/
+.grid-conteiner{
+    display: grid;
+    gap: 10px;
+    margin: 10px;
+    padding: 10px;
+    grid-template:
+
+    "navegacion" 80px
+    "imgprincipal"250px
+    "bienvenida" 150px
+    "google" 55px
+    "apple" 55px
+    "carousel"800px
+    "cuerpo" 
+    "footer"50px;
+    
+}
+/*///////////////////carousel/////////////////////*/
+
+
+
+/*///////////////////carousel/////////////////////*/
+@media(min-width:800px){
+    .grid-conteiner{
+        grid-template:
+        "navegacion navegacion navegacion "80px
+        "imgprincipal bienvenida bienvenida " 200px 
+        "imgprincipal  google   apple " 60px
+        "carousel   carousel carousel "700px
+        "cuerpo    cuerpo    cuerpo" 
+        "footer     footer    footer" 60px/
+          50%   25% auto;
+    }
+    /*////////////////////////////////////////*/
+    .imagen-principal img{
+
+        width: 90%;
+        height: 100%;
+        
+    }
+    /*////////////////////////////////////////*/
+
+
+
 }
